@@ -31,6 +31,7 @@ class GameViewController: UIViewController {
         
         randomWord = word.listOfWords.randomElement() ?? " "
         print(randomWord)
+        displayWord.text = randomWord
         
         timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
                     self.gameTime -= 1
@@ -67,6 +68,10 @@ class GameViewController: UIViewController {
             let randomIndex = Int.random(in: 0..<randomWord.count)
             displayWord.text = randomWord
              }
+    }
+    
+    func checkWord(){
+        
     }
     
     /*

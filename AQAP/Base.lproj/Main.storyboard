@@ -35,6 +35,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start the Game"/>
                                 <connections>
+                                    <action selector="startPlaying:" destination="8UI-Bf-6Gt" eventType="touchUpInside" id="w9f-RC-DG7"/>
                                     <segue destination="3vQ-g3-dmA" kind="presentation" modalPresentationStyle="fullScreen" id="WZL-d2-rp5"/>
                                 </connections>
                             </button>
@@ -67,6 +68,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="8UI-Bf-6Gt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
