@@ -154,9 +154,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdo-0r-XRx">
-                                <rect key="frame" x="320" y="59" width="57" height="30"/>
+                                <rect key="frame" x="245" y="59" width="132" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="57" id="iGo-G6-Wyr"/>
+                                    <constraint firstAttribute="width" constant="132" id="qpy-1O-ySN"/>
                                     <constraint firstAttribute="height" constant="30" id="yF5-0W-4wZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -233,13 +233,14 @@
                     <connections>
                         <outlet property="CountdownTimer" destination="xT7-MP-naI" id="J6U-2m-nQm"/>
                         <outlet property="displayWord" destination="zgW-d7-fxg" id="tqW-V2-c4w"/>
+                        <outlet property="inputTextField" destination="HGZ-6J-zML" id="Feu-Bz-kKJ"/>
                         <outlet property="playerScore" destination="fdo-0r-XRx" id="T32-yE-cgM"/>
                         <outlet property="playtime" destination="lJR-sI-DNg" id="l3Q-zp-aFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTl-cz-exP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="-2"/>
+            <point key="canvasLocation" x="797.70992366412213" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

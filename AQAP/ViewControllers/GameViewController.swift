@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, UITextFieldDelegate {
     
     var word = Words()
     var randomWord: String = " "
@@ -18,6 +18,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var CountdownTimer: UILabel!
     @IBOutlet weak var displayWord: UILabel!
     
+    @IBOutlet weak var inputTextField: UITextField!
+    var score = 0
     var timer1: Timer?
     var countDown = 3
     
@@ -26,12 +28,11 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputTextField.delegate = self
+        playerScore.text = "Score: \(score)"
+        showNextWord()
 
         // Do any additional setup after loading the view.
-        
-        randomWord = word.listOfWords.randomElement() ?? " "
-        print(randomWord)
-        displayWord.text = randomWord
         
         timer2 = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { (timer) in
                     self.gameTime -= 1
@@ -43,12 +44,21 @@ class GameViewController: UIViewController {
                 })
             }
             
-            func gameOver() {
-                timer2?.invalidate()
-                // Show game over screen
-            }
+            
+    @IBAction func playerInput(_ textField: UITextField) {
+        if textField.text == randomWord {
+            score += 1
+            playerScore.text = "Score: \(score)"
+            textField.text = ""
+            showNextWord()
+            
+        }
+    }
     
-    @IBAction func playerInput(_ sender: UITextField) {
+    func showNextWord(){
+        randomWord = word.listOfWords.randomElement() ?? ""
+        print(randomWord)
+        displayWord.text = randomWord
     }
     
     @IBAction func startPlaying(_ sender: UIButton) {
@@ -69,6 +79,12 @@ class GameViewController: UIViewController {
             displayWord.text = randomWord
              }
     }
+    
+    func gameOver() {
+        timer2?.invalidate()
+        // Show game over screen
+    }
+
     
     func checkWord(){
         

@@ -108,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				B13F219129D710EC0074B5B5 /* Model */,
+				B13F219429D713510074B5B5 /* ViewControllers */,
 				B13F216129D710DC0074B5B5 /* AppDelegate.swift */,
 				B13F216329D710DC0074B5B5 /* SceneDelegate.swift */,
 				B13F216729D710DC0074B5B5 /* Main.storyboard */,
@@ -140,7 +141,6 @@
 			children = (
 				B13F219229D711180074B5B5 /* Words.swift */,
 				B13F219929D751840074B5B5 /* lvl.swift */,
-				B13F219429D713510074B5B5 /* ViewControllers */,
 			);
 			path = Model;
 			sourceTree = "<group>";
